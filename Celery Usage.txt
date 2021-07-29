@@ -1,0 +1,35 @@
+To Create Django Project:
+	
+	django-admin startproject <project_name>
+
+To Create  Apps in Project:
+
+	python manage.py startapp <app_ name>
+
+
+Celery.py:
+
+	from __future__ import absolute_import, unicode_literals
+
+	import os
+	from celery import Celery
+	os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pro.settings')
+	app = Celery('pro')
+	app.config_from_object('django.conf:settings', namespace='Celery')
+	app.autodiscover_tasks()
+
+Tasks:
+
+	from celery import Celery
+
+	app = Celery('tasks', broker='pyamqp://guest@localhost//')
+
+	@app.task
+	def add(x, y):
+   		 return x + y
+
+
+To Run the Task:
+
+	celery -A <project_name> worker -l info --pool=solo
+
