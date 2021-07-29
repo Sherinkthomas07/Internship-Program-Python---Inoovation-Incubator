@@ -1,0 +1,55 @@
+<html>
+{%load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+
+<body>
+<style>
+body {
+
+                       background-image: url( "{% static 'images/football.jpg' %}");
+                       background-repeat: no-repeat;
+                       background-attachment: fixed;
+                       background-size: 100% 100%;
+                  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+
+<ul>
+    <li><a href="{% url 'home'%">Welcome Home</a></li>
+    <li style="float:right"><a  href="#">Logout</a></li>
+    <li style="float:right"><a  href="#">Profile</a></li>
+    <li style="float:right"><a  href="#">Search</a></li>
+
+
+</ul>
+</div>
+</body>
+</html>

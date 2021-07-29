@@ -1,0 +1,141 @@
+<html>
+{% load static %}
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="overlay">
+<form method="POST" action="{%url 'register' %}" onSubmit = "return validateform(this)">
+	{%csrf_token%}
+   <!--   con = Container  for items in the form-->
+   <div class="con">
+   <!--     Start  header Content  -->
+   <header class="head-form">
+      <h2>Register</h2>
+
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set">
+
+      <!--   first name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" id="fname-input" type="text" name="fname" placeholder="First Name" required>
+
+      <br>
+       <!--   first name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   first name Input-->
+         <input class="form-input" id="lname-input" type="text" name="lname" placeholder="Last Name" required>
+
+      <br>
+       <!--   State -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   state Input-->
+         <input class="form-input" id="state-input" type="text" name="state" placeholder="State" required>
+
+      <br>
+
+       <!--   city -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   city Input-->
+         <input class="form-input" id="city-input" type="text" name="city" placeholder="City" required>
+
+      <br>
+
+       <!--   Zip Code  -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   Zip Code Input-->
+         <input class="form-input" id="zip-input" type="text" name="zip" placeholder="Zip Code" required>
+
+      <br>
+
+       <!--   Email  -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   Email Input-->
+         <input class="form-input" id="email-input" type="text" name="mail" placeholder="Email" required>
+
+      <br>
+
+       <!--   Mobile -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   Mobile Input-->
+         <input class="form-input" id="mobile-input" type="text" name="mobile" placeholder="Mobile" required>
+
+      <br>
+
+       <!--   user name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" id="username-input" type="text" name="username" placeholder="User Name" required>
+
+      <br>
+
+
+       <!--   Password -->
+
+      <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Password Input-->
+      <input class="form-input" type="password" placeholder="Password" id="pass1"  name="pass" required>
+
+<!--      Show/hide password  -->
+     <span>
+        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+     </span>
+
+
+      <br>
+
+       <!--   Confirm Password -->
+
+        <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Retype Password-->
+      <input class="form-input" type="password" placeholder="Confirm Password" id="pass2"  name="pass2" required>
+
+<!--      Show/hide password  -->
+     <span>
+        <i class="fa fa-eye" aria-hidden="true"  type="button" id="ey"></i>
+     </span>
+
+
+      <br>
+
+
+<!--        buttons -->
+<!--      button Sign Up -->
+      <button class="sign-up"> Sign Up </button>
+   </div>
+
+<!--   other buttons -->
+
+<!--   End Conrainer  -->
+  </div>
+
+  <!-- End Form -->
+</form>
+</div>
+
+</body>
+</html>
