@@ -1,0 +1,22 @@
+-- Table: public.csv_dataset6
+
+-- DROP TABLE public.csv_dataset6;
+
+CREATE TABLE public.csv_dataset6
+(
+    "Emp_ID" bigint,
+    "Name_Prefix" text COLLATE pg_catalog."default",
+    "First_Name" text COLLATE pg_catalog."default",
+    "Middle_Initial" text COLLATE pg_catalog."default",
+    "Last_Name" text COLLATE pg_catalog."default",
+    "Gender" text COLLATE pg_catalog."default",
+    "Email" text COLLATE pg_catalog."default",
+    "Father's_Name" text COLLATE pg_catalog."default",
+    "Hash" bigint,
+    "Mother's_Name" text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.csv_dataset6
+    OWNER to postgres;
